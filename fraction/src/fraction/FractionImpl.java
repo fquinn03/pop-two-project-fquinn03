@@ -21,6 +21,9 @@ public class FractionImpl implements Fraction {
     public FractionImpl(int numerator, int denominator) {
         this.numerator = numerator;
         this.denominator = denominator;
+        if (this.denominator == 0){
+            throw new ArithmeticException("The denominator can not be zero. ");
+        }
     }
 
     /**
@@ -141,6 +144,14 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public String toString() {
-        return null;
+        if(this.denominator != 1) {
+            String s = this.numerator + "/" + this.denominator;
+            return s;
+        }
+        else
+            return String.valueOf(this.numerator);
+
     }
+
+
 }
