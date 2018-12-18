@@ -8,17 +8,6 @@ import static org.junit.Assert.fail;
 
 public class Tests {
 
-    @Test
-    public void isaFraction() {
-        Fraction f = new fraction.FractionImpl(3, 4);
-        assertTrue(f instanceof Fraction);
-    }
-    @Test
-    public void wholeNumsAreFractions(){
-        Fraction g = new fraction.FractionImpl(7);
-        assertTrue(g instanceof Fraction);
-    }
-
     @Test(expected = ArithmeticException.class)
         public void zeroDenomiatorIsNotAllowed(){
         Fraction f = new fraction.FractionImpl(3,0);
@@ -58,6 +47,25 @@ public class Tests {
         Fraction f = new fraction.FractionImpl(9, 12);
         assertThat(f.toString(), is("3/4"));
     }
-
+    @Test
+    public void normaliseNegativeFraction(){
+        Fraction f = new fraction.FractionImpl(-9, 12);
+        assertThat(f.toString(), is("-3/4"));
+    }
+    @Test
+    public void normaliseLargeNumeratorFraction(){
+        Fraction f = new fraction.FractionImpl(16, 4);
+        assertThat(f.toString(), is("4"));
+    }
+    @Test
+    public void normaliseLargeNumeratorNegativeDenominatrFraction(){
+        Fraction f = new fraction.FractionImpl(15, -3);
+        assertThat(f.toString(), is("-5"));
+    }
+    @Test
+    public void normaliseNegativeDenominatorFraction(){
+        Fraction f = new fraction.FractionImpl(18, -6);
+        assertThat(f.toString(), is("-3"));
+    }
 
 }
