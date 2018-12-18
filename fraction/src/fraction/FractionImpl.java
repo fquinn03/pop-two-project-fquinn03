@@ -3,6 +3,8 @@
  */
 package fraction;
 
+import static java.lang.Integer.parseInt;
+
 public class FractionImpl implements Fraction {
     /**
      * Parameters are the <em>numerator</em> and the <em>denominator</em>.
@@ -59,7 +61,16 @@ public class FractionImpl implements Fraction {
      * @param fraction the string representation of the fraction
      */
     public FractionImpl(String fraction) {
-        // TODO
+        try {
+            this.numerator = parseInt(fraction);
+        }
+        catch(NumberFormatException e){
+
+        }
+        finally {
+            this.denominator = parseInt(fraction);
+        }
+
     }
 
     /**
@@ -156,7 +167,7 @@ public class FractionImpl implements Fraction {
     @Override
     public String toString() {
         if(this.denominator != 1 || this.numerator == 0) {
-            String s = this.numerator + "/" + this.denominator;
+            String s = String.valueOf(this.numerator) + "/" + String.valueOf(this.denominator);
             return s;
         }
         else

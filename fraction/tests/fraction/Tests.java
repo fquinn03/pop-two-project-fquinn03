@@ -67,5 +67,11 @@ public class Tests {
         Fraction f = new fraction.FractionImpl(18, -6);
         assertThat(f.toString(), is("-3"));
     }
+    @Test
+    public void stringToFraction(){
+        Fraction f = new fraction.FractionImpl("7/8");
+         assertThat(f.toString(), is("7/8"));
+
+    }
 
 }
