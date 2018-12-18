@@ -18,11 +18,22 @@ public class FractionImpl implements Fraction {
     private int numerator;
     private int denominator;
 
+    private static int findGCD(int number1, int number2) {
+        if(number2 == 0){
+            return number1;
+        }
+        return findGCD(number2, number1%number2);
+    }
+
     public FractionImpl(int numerator, int denominator) {
-        this.numerator = numerator;
-        this.denominator = denominator;
+        this.numerator = (numerator/findGCD(numerator, denominator));
+        this.denominator = (denominator/findGCD(numerator, denominator));
         if (this.denominator == 0){
             throw new ArithmeticException("The denominator can not be zero. ");
+        }
+        if (this.denominator < 0){
+            this.numerator*=-1;
+            this.denominator*=-1;
         }
     }
 
@@ -144,7 +155,7 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public String toString() {
-        if(this.denominator != 1) {
+        if(this.denominator != 1 || this.numerator == 0) {
             String s = this.numerator + "/" + this.denominator;
             return s;
         }
@@ -152,6 +163,5 @@ public class FractionImpl implements Fraction {
             return String.valueOf(this.numerator);
 
     }
-
 
 }

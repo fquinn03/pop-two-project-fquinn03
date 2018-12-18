@@ -48,4 +48,16 @@ public class Tests {
         assertThat(n.toString(), is("-2/3"));
     }
 
+    @Test
+    public void zeroAsAFraction(){
+        Fraction f = new fraction.FractionImpl(0);
+        assertThat(f.toString(), is("0/1"));
+    }
+    @Test
+    public void normaliseFraction(){
+        Fraction f = new fraction.FractionImpl(9, 12);
+        assertThat(f.toString(), is("3/4"));
+    }
+
+
 }
