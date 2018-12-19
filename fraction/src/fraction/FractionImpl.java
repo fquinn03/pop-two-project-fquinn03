@@ -4,7 +4,7 @@
 package fraction;
 
 import static java.lang.Integer.parseInt;
-import static java.lang.Integer.toUnsignedString;
+
 
 public class FractionImpl implements Fraction {
     /**
@@ -99,8 +99,10 @@ public class FractionImpl implements Fraction {
      * @inheritDoc
      */
     @Override
-    public Fraction subtract(Fraction f) {
-        return null;
+    public Fraction subtract(FractionImpl f) {
+        int NewNumerator = ((this.numerator*f.denominator)-(this.denominator*f.numerator));
+        int NewDenominator = (this.denominator*f.denominator);
+        return new FractionImpl(NewNumerator, NewDenominator);
     }
 
     /**

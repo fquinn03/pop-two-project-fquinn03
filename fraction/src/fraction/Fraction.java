@@ -26,7 +26,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to subtract from the current fraction
      * @return the result of the subtraction
      */
-    public Fraction subtract(Fraction f);
+    public Fraction subtract(FractionImpl f);
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>product</em> of <pre>this</pre> and the parameter

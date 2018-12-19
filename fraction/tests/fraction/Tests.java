@@ -111,4 +111,40 @@ public class Tests {
         FractionImpl g = new FractionImpl(9, -3);
         assertThat(f.add(g).toString(), is("2"));
     }
+
+    @Test
+    public void addTwoNegativeOneFractions(){
+        FractionImpl f = new FractionImpl(-7, 10);
+        FractionImpl g = new FractionImpl(2, -15);
+        assertThat(f.add(g).toString(), is("-5/6"));
+    }
+
+    @Test
+    public void addFractionsToGiveZero(){
+        FractionImpl f = new FractionImpl(3, -6);
+        FractionImpl g = new FractionImpl(2, 4);
+        assertThat(f.add(g).toString(), is("0/1"));
+    }
+
+    @Test
+    public void subractTwoPostitiveFractionsSameDenominator(){
+        FractionImpl f = new FractionImpl(1, 4);
+        FractionImpl g = new FractionImpl(2, 4);
+        assertThat(f.subtract(g).toString(), is("-1/4"));
+    }
+
+
+    @Test
+    public void subtractOneNegativeOnePostiveFraction(){
+        FractionImpl f = new FractionImpl(3, -6);
+        FractionImpl g = new FractionImpl(2, 4);
+        assertThat(f.subtract(g).toString(), is("-1"));
+    }
+
+    @Test
+    public void subtractTwoNegativeFractions(){
+        FractionImpl f = new FractionImpl(-7, 10);
+        FractionImpl g = new FractionImpl(2, -15);
+        assertThat(f.subtract(g).toString(), is("-17/30"));
+    }
 }
