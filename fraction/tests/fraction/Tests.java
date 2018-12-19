@@ -92,19 +92,19 @@ public class Tests {
     }
 
     @Test
-    public void addTwoPostiveFractionsDifferentDenominator(){
+    public void addTwoPositiveFractionsDifferentDenominator(){
         FractionImpl f = new FractionImpl(1, 3);
         FractionImpl g = new FractionImpl(2, 4);
         assertThat(f.add(g).toString(), is("5/6"));
     }
     @Test
-    public void addOneNegativeOnePostiveFraction(){
+    public void addOneNegativeOnePositiveFraction(){
         FractionImpl f = new FractionImpl(1, -3);
         FractionImpl g = new FractionImpl(2, 4);
         assertThat(f.add(g).toString(), is("1/6"));
     }
     @Test
-    public void addOneNegativeOnePostiveFractionLargeNumerator(){
+    public void addOneNegativeOnePositiveFractionLargeNumerator(){
         FractionImpl f = new FractionImpl(10, 2);
         FractionImpl g = new FractionImpl(9, -3);
         assertThat(f.add(g).toString(), is("2"));
@@ -212,9 +212,92 @@ public class Tests {
     }
 
     @Test
+    public void divideFractionWithZeroNumeratorByAnotherFraction(){
+        FractionImpl f = new FractionImpl(0, 5);
+        FractionImpl g = new FractionImpl(3, 1);
+        assertThat(f.divide(g).toString(), is("0/1"));
+    }
+
+    @Test
     public void divideFractionByNegativeFraction(){
         FractionImpl f = new FractionImpl(3, 5);
         FractionImpl g = new FractionImpl(7, -8);
         assertThat(f.divide(g).toString(), is("-24/35"));
+    }
+
+    @Test
+    public void negativeNumeratorNegativeDenominatorToString(){
+        FractionImpl n = new FractionImpl(-2, -3);
+        assertThat(n.toString(), is("2/3"));
+    }
+
+    @Test
+    public void divideNegativeFractionByNegativeFraction(){
+        FractionImpl f = new FractionImpl(3, -5);
+        FractionImpl g = new FractionImpl(-5, 8);
+        assertThat(f.divide(g).toString(), is("24/25"));
+    }
+
+    @Test
+    public void absOfPositiveFraction(){
+        Fraction f = new FractionImpl(7,8);
+        assertThat(f.abs().toString(), is("7/8"));
+    }
+
+    @Test
+    public void absOfNegativeFraction(){
+        Fraction f = new FractionImpl(-7,8);
+        assertThat(f.abs().toString(), is("7/8"));
+    }
+
+    @Test
+    public void absOfTwoNegativesMakeAPositiveFraction(){
+        Fraction f = new FractionImpl(-5,-9);
+        assertThat(f.abs().toString(), is("5/9"));
+    }
+
+
+    @Test
+    public void negatePositiveFraction(){
+        Fraction f = new FractionImpl(5,9);
+        assertThat(f.negate().toString(), is("-5/9"));
+    }
+
+    @Test
+    public void negateNegativeFraction(){
+        Fraction f = new FractionImpl(-6,9);
+        assertThat(f.negate().toString(), is("2/3"));
+        Fraction g = new FractionImpl(3,-5);
+        assertThat(g.negate().toString(), is("3/5"));
+    }
+
+    @Test
+    public void negateDoubleNegativePositiveFraction(){
+        Fraction f = new FractionImpl(-3,-5);
+        assertThat(f.negate().toString(), is("-3/5"));
+    }
+
+    @Test
+    public void inversePositiveFraction(){
+        Fraction f = new FractionImpl(3,5);
+        assertThat(f.inverse().toString(), is("5/3"));
+    }
+
+    @Test
+    public void inverseNegativeNumeratorFraction(){
+        Fraction f = new FractionImpl(-3,6);
+        assertThat(f.inverse().toString(), is("-2"));
+    }
+
+    @Test
+    public void inverseNegativeDenominatorFraction(){
+        Fraction f = new FractionImpl(3,-4);
+        assertThat(f.inverse().toString(), is("-4/3"));
+    }
+
+    @Test
+    public void inverseNegativeNumeratorAndDenominatorFraction(){
+        Fraction f = new FractionImpl(-3,-4);
+        assertThat(f.inverse().toString(), is("4/3"));
     }
 }

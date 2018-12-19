@@ -133,7 +133,14 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public Fraction abs() {
-        return null;
+        if(this.numerator < 0) {
+            this.numerator *= -1;
+        }
+        if(this.denominator < 0){
+            this.denominator *= -1;
+        }
+
+        return new FractionImpl(this.numerator, this.denominator);
     }
 
     /**
@@ -141,7 +148,9 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public Fraction negate() {
-        return null;
+        int newNumerator = this.numerator*-1;
+        return new FractionImpl(newNumerator, this.denominator);
+
     }
 
     /**
@@ -173,7 +182,9 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public Fraction inverse() {
-        return null;
+       int newNumerator = this.denominator;
+       int  newDenomintor = this.numerator;
+        return new FractionImpl(newNumerator, newDenomintor);
     }
 
     /**
