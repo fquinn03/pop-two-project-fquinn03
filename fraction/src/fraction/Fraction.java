@@ -35,7 +35,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to multiply with the current fraction
      * @return the result of the multiplication
      */
-    public Fraction multiply(Fraction f);
+    public Fraction multiply(FractionImpl f);
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>quotient</em> of dividing <pre>this</pre> by the parameter

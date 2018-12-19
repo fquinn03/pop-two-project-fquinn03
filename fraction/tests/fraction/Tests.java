@@ -1,11 +1,9 @@
 package fraction;
-import org.junit.Ignore;
 import org.junit.Test;
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
-
 
 public class Tests {
 
@@ -81,7 +79,7 @@ public class Tests {
         FractionImpl f = new FractionImpl("3/0");
     }
 
-    @Test(expected = ArithmeticException.class)
+    @Test(expected = NumberFormatException.class)
         public void mixedFractionStringtoFractionImpl() {
             FractionImpl f = new FractionImpl("1 3/4");
 
@@ -133,7 +131,6 @@ public class Tests {
         assertThat(f.subtract(g).toString(), is("-1/4"));
     }
 
-
     @Test
     public void subtractOneNegativeOnePostiveFraction(){
         FractionImpl f = new FractionImpl(3, -6);
@@ -146,5 +143,43 @@ public class Tests {
         FractionImpl f = new FractionImpl(-7, 10);
         FractionImpl g = new FractionImpl(2, -15);
         assertThat(f.subtract(g).toString(), is("-17/30"));
+    }
+
+    @Test
+    public void multiplyTwoPositiveFractions(){
+        FractionImpl f = new FractionImpl(2, 3);
+        FractionImpl g = new FractionImpl(5, 8);
+        assertThat(f.multiply(g).toString(), is("5/12"));
+        FractionImpl h = new FractionImpl(4, 3);
+        FractionImpl j = new FractionImpl(5, 10);
+        assertThat(h.multiply(j).toString(), is("2/3"));
+    }
+    @Test
+    public void multiplyANegativeFractionByPositiveFraction(){
+        FractionImpl f = new FractionImpl(2, 3);
+        FractionImpl g = new FractionImpl(3, -8);
+        assertThat(f.multiply(g).toString(), is("-1/4"));
+    }
+    @Test
+    public void multiplyTwoNegativeFractions(){
+        FractionImpl f = new FractionImpl(-6, 8);
+        FractionImpl g = new FractionImpl(4, -5);
+        assertThat(f.multiply(g).toString(), is("3/5"));
+    }
+    @Test
+    public void multiplyAFractionByZero(){
+        FractionImpl f = new FractionImpl(2, 3);
+        FractionImpl g = new FractionImpl(0);
+        assertThat(f.multiply(g).toString(), is("0/1"));
+    }
+
+    @Test
+    public void multiplyTwoLargeNumeratorFrations(){
+        FractionImpl f = new FractionImpl(81, 9);
+        FractionImpl g = new FractionImpl(36, 12);
+        assertThat(f.multiply(g).toString(), is("27"));
+        FractionImpl h = new FractionImpl(14, 3);
+        FractionImpl j = new FractionImpl(25, 10);
+        assertThat(h.multiply(j).toString(), is("35/3"));
     }
 }

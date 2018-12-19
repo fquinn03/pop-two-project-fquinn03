@@ -72,7 +72,7 @@ public class FractionImpl implements Fraction {
             this.denominator = (denominator/findGCD(numerator, denominator));
         }
         catch(NumberFormatException e) {
-            throw new ArithmeticException("Mixed fractions should be entered as improper fractions. ");
+            throw new NumberFormatException("Mixed fractions should be entered as improper fractions with no spaces. Input '7/4' rather than '1 3/4' ");
         }
 
         if (this.denominator == 0){
@@ -109,8 +109,10 @@ public class FractionImpl implements Fraction {
      * @inheritDoc
      */
     @Override
-    public Fraction multiply(Fraction f) {
-        return null;
+    public Fraction multiply(FractionImpl f) {
+        int NewNumerator = this.numerator*f.numerator;
+        int NewDenominator = this.denominator*f.denominator;
+        return new FractionImpl(NewNumerator, NewDenominator);
     }
 
     /**
