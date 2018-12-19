@@ -5,9 +5,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        FractionImpl f = new FractionImpl("3/4");
-        System.out.println(f.getDenominator());
-        System.out.println(f.getNumerator());
+        Fraction f = new FractionImpl("3/4");
+        Fraction g = new FractionImpl("1 3/4");
+
 
     }
 }

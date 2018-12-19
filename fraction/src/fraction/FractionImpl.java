@@ -4,6 +4,7 @@
 package fraction;
 
 import static java.lang.Integer.parseInt;
+import static java.lang.Integer.toUnsignedString;
 
 public class FractionImpl implements Fraction {
     /**
@@ -63,10 +64,17 @@ public class FractionImpl implements Fraction {
      */
 
     public FractionImpl(String fraction) {
-        numerator = parseInt(fraction.substring(0, fraction.indexOf("/")));
-        denominator = parseInt(fraction.substring(fraction.indexOf("/")+1));
-        this.numerator = (numerator/findGCD(numerator, denominator));
-        this.denominator = (denominator/findGCD(numerator, denominator));
+
+       try {
+            numerator = parseInt(fraction.substring(0, fraction.indexOf("/")));
+            denominator = parseInt(fraction.substring(fraction.indexOf("/") + 1));
+            this.numerator = (numerator/findGCD(numerator, denominator));
+            this.denominator = (denominator/findGCD(numerator, denominator));
+        }
+        catch(NumberFormatException e) {
+            throw new ArithmeticException("Mixed fractions should be entered as improper fractions. ");
+        }
+
         if (this.denominator == 0){
             throw new ArithmeticException("The denominator can not be zero. ");
         }
@@ -77,22 +85,14 @@ public class FractionImpl implements Fraction {
 
     }
 
-    //Getters just for testing purposes
-    public int getDenominator()
-    {
-      return this.denominator;
-    }
-
-    public int getNumerator() {
-        return this.numerator;
-    }
-
     /**
      * @inheritDoc
      */
     @Override
-    public Fraction add(Fraction f) {
-        return null;
+    public Fraction add(FractionImpl f) {
+        int NewNumerator = ((this.numerator*f.denominator)+(this.denominator*f.numerator));
+        int NewDenominator = (this.denominator*f.denominator);
+        return new FractionImpl(NewNumerator, NewDenominator);
     }
 
     /**

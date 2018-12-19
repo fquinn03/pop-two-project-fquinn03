@@ -1,4 +1,5 @@
 package fraction;
+import org.junit.Ignore;
 import org.junit.Test;
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.is;
@@ -74,29 +75,40 @@ public class Tests {
         Fraction f = new fraction.FractionImpl(6, -18);
         assertThat(f.toString(), is("-1/3"));
     }
-    @Test
-    public void stringToFraction(){
-        FractionImpl f = new FractionImpl("7/8");
-        assertThat(f.getNumerator(), is(7));
-        assertThat(f.getDenominator(), is(8));
-    }
-
-    @Test
-    public void stringToNegativeNumeratorFraction(){
-        FractionImpl f = new FractionImpl("-5/6");
-        assertThat(f.getNumerator(), is(-5));
-        assertThat(f.getDenominator(), is(6));
-    }
-
-    @Test
-    public void stringToNegativeDenominatorFraction(){
-        FractionImpl f = new FractionImpl("5/-6");
-        assertThat(f.getNumerator(), is(-5));
-        assertThat(f.getDenominator(), is(6));
-    }
 
     @Test(expected = ArithmeticException.class)
     public void stringToFractionZeroDenominator(){
         FractionImpl f = new FractionImpl("3/0");
+    }
+
+    @Test(expected = ArithmeticException.class)
+        public void mixedFractionStringtoFractionImpl() {
+            FractionImpl f = new FractionImpl("1 3/4");
+
+    }
+    @Test
+    public void addTwoPositiveFractionsSameDenominator(){
+        FractionImpl f = new FractionImpl(1, 4);
+        FractionImpl g = new FractionImpl(2, 4);
+        assertThat(f.add(g).toString(), is("3/4"));
+    }
+
+    @Test
+    public void addTwoPostiveFractionsDifferentDenominator(){
+        FractionImpl f = new FractionImpl(1, 3);
+        FractionImpl g = new FractionImpl(2, 4);
+        assertThat(f.add(g).toString(), is("5/6"));
+    }
+    @Test
+    public void addOneNegativeOnePostiveFraction(){
+        FractionImpl f = new FractionImpl(1, -3);
+        FractionImpl g = new FractionImpl(2, 4);
+        assertThat(f.add(g).toString(), is("1/6"));
+    }
+    @Test
+    public void addOneNegativeOnePostiveFractionLargeNumerator(){
+        FractionImpl f = new FractionImpl(10, 2);
+        FractionImpl g = new FractionImpl(9, -3);
+        assertThat(f.add(g).toString(), is("2"));
     }
 }
