@@ -119,8 +119,13 @@ public class FractionImpl implements Fraction {
      * @inheritDoc
      */
     @Override
-    public Fraction divide(Fraction f) {
-        return null;
+    public Fraction divide(FractionImpl f) {
+        int NewNumerator = this.numerator*f.denominator;
+        int NewDenominator = this.denominator*f.numerator;
+        if (NewDenominator == 0){
+            throw new ArithmeticException("You can not divide by zero. ");
+        }
+        return new FractionImpl(NewNumerator, NewDenominator);
     }
 
     /**

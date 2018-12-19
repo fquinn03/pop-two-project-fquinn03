@@ -182,4 +182,39 @@ public class Tests {
         FractionImpl j = new FractionImpl(25, 10);
         assertThat(h.multiply(j).toString(), is("35/3"));
     }
+
+    @Test
+    public void divideWholeNumByAFraction(){
+        FractionImpl f = new FractionImpl(5);
+        FractionImpl g = new FractionImpl(1,2);
+        assertThat(f.divide(g).toString(), is("10"));
+    }
+
+    @Test
+    public void divideFractionByAFraction(){
+        FractionImpl f = new FractionImpl(3, 5);
+        FractionImpl g = new FractionImpl(1,4);
+        assertThat(f.divide(g).toString(), is("12/5"));
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void divideFractionZero(){
+        FractionImpl f = new FractionImpl(3, 5);
+        FractionImpl g = new FractionImpl(0);
+        f.divide(g);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void divideFractionByZeroFraction(){
+        FractionImpl f = new FractionImpl(3, 5);
+        FractionImpl g = new FractionImpl(0, 1);
+        f.divide(g);
+    }
+
+    @Test
+    public void divideFractionByNegativeFraction(){
+        FractionImpl f = new FractionImpl(3, 5);
+        FractionImpl g = new FractionImpl(7, -8);
+        assertThat(f.divide(g).toString(), is("-24/35"));
+    }
 }

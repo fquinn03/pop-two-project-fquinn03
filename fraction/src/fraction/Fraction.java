@@ -44,7 +44,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to take part in the division
      * @return the result of the division
      */
-    public Fraction divide(Fraction f);
+    public Fraction divide(FractionImpl f);
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>absolute value</em> of <pre>this</pre> fraction
