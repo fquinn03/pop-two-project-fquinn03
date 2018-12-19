@@ -20,11 +20,12 @@ public class FractionImpl implements Fraction {
     private int numerator;
     private int denominator;
 
-    private static int findGCD(int number1, int number2) {
-        if(number2 == 0){
-            return number1;
+    private static int findGCD(int numerator, int denominator) {
+
+        if(denominator == 0){
+            return numerator;
         }
-        return findGCD(number2, number1%number2);
+        return findGCD(denominator, numerator%denominator);
     }
 
     public FractionImpl(int numerator, int denominator) {
@@ -60,17 +61,30 @@ public class FractionImpl implements Fraction {
      *
      * @param fraction the string representation of the fraction
      */
+
     public FractionImpl(String fraction) {
-        try {
-            this.numerator = parseInt(fraction);
+        numerator = parseInt(fraction.substring(0, fraction.indexOf("/")));
+        denominator = parseInt(fraction.substring(fraction.indexOf("/")+1));
+        this.numerator = (numerator/findGCD(numerator, denominator));
+        this.denominator = (denominator/findGCD(numerator, denominator));
+        if (this.denominator == 0){
+            throw new ArithmeticException("The denominator can not be zero. ");
         }
-        catch(NumberFormatException e){
+        if (this.denominator < 0) {
+            this.numerator *= -1;
+            this.denominator *= -1;
+        }
 
-        }
-        finally {
-            this.denominator = parseInt(fraction);
-        }
+    }
 
+    //Getters just for testing purposes
+    public int getDenominator()
+    {
+      return this.denominator;
+    }
+
+    public int getNumerator() {
+        return this.numerator;
     }
 
     /**
