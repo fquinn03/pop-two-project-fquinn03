@@ -1,5 +1,5 @@
 package fraction;
-
+import java.lang.Comparable;
 /**
  * Created by fquinn03 on 28/11/2018.
  */
@@ -17,7 +17,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to add to the current fraction
      * @return the result of the addition
      */
-    public Fraction add(FractionImpl f);
+    public Fraction add(Fraction f);
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>difference</em> of <pre>this</pre> minus the parameter
@@ -26,7 +26,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to subtract from the current fraction
      * @return the result of the subtraction
      */
-    public Fraction subtract(FractionImpl f);
+    public Fraction subtract(Fraction f);
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>product</em> of <pre>this</pre> and the parameter
@@ -35,7 +35,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to multiply with the current fraction
      * @return the result of the multiplication
      */
-    public Fraction multiply(FractionImpl f);
+    public Fraction multiply(Fraction f);
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>quotient</em> of dividing <pre>this</pre> by the parameter
@@ -44,7 +44,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to take part in the division
      * @return the result of the division
      */
-    public Fraction divide(FractionImpl f);
+    public Fraction divide(Fraction f);
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>absolute value</em> of <pre>this</pre> fraction
@@ -77,7 +77,6 @@ public interface Fraction extends Comparable<Fraction> {
      */
     @Override
     public boolean equals(Object o);
-
     /**
      * Returns:
      * <ul>
@@ -89,6 +88,7 @@ public interface Fraction extends Comparable<Fraction> {
      * @param f the fraction to compare <pre>this</pre> to
      * @return the result of the comparison
      */
+
     @Override
     public int compareTo(Fraction f);
 

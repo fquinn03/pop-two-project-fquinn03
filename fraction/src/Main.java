@@ -9,6 +9,12 @@ public class Main {
         FractionImpl g = new FractionImpl(0);
         f.divide(g).toString();
 
+        Fraction j = new FractionImpl("3");
+        System.out.println(g.clone());
+        System.out.println(g.hashCode());
+        System.out.println(f.hashcode());
+
+
 
     }
 }

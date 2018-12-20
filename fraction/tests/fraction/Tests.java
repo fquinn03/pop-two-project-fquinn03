@@ -7,6 +7,27 @@ import static org.junit.Assert.fail;
 
 public class Tests {
 
+/* GCD testing passed as package protected method. Changed to Private now as required by specification.
+    @Test
+        public void TestingGCDFunction(){
+        assertThat(FractionImpl.findGCD(3, 9), is(3));
+        assertThat(FractionImpl.findGCD(16, 4), is(4));
+        assertThat(FractionImpl.findGCD(24, 16), is(8));
+        assertThat(FractionImpl.findGCD(-35, 20), is(5));
+    }
+    */
+    @Test
+        public void wholeNumberFromAString(){
+        Fraction f = new FractionImpl("3");
+        assertThat(f.toString(), is("3"));
+    }
+
+    @Test
+    public void fractionFromTwoInts(){
+        Fraction f = new FractionImpl(6,7);
+        assertThat(f.toString(), is("6/7"));
+    }
+
     @Test(expected = ArithmeticException.class)
         public void zeroDenomiatorIsNotAllowed(){
         FractionImpl f = new FractionImpl(3,0);
@@ -300,4 +321,43 @@ public class Tests {
         Fraction f = new FractionImpl(-3,-4);
         assertThat(f.inverse().toString(), is("4/3"));
     }
+
+    @Test
+    public void compareToSomethingLarger(){
+        FractionImpl f = new FractionImpl(1,5);
+        FractionImpl g = new FractionImpl(3, 7);
+        assertThat(f.compareTo(g), is(-1));
+    }
+
+    @Test
+    public void compareToSomethingSmaller(){
+        FractionImpl f = new FractionImpl(4,5);
+        FractionImpl g = new FractionImpl(2, 4);
+        assertThat(f.compareTo(g), is(1));
+    }
+
+    @Test
+    public void compareToSomethingTheSame(){
+        FractionImpl f = new FractionImpl(3,6);
+        FractionImpl g = new FractionImpl(4, 8);
+        assertThat(f.compareTo(g), is(0));
+    }
+
+    @Test
+    public void equalsSomethingTheSame(){
+        FractionImpl f = new FractionImpl(3,6);
+        FractionImpl g = new FractionImpl(4, 8);
+        assertTrue(f.equals(g));
+        FractionImpl h = new FractionImpl(9,3);
+        FractionImpl j = new FractionImpl(3);
+        assertTrue(h.equals(j));
+    }
+
+    @Test
+    public void equalsSomethingNotTheSame(){
+        FractionImpl f = new FractionImpl(3);
+        FractionImpl g = new FractionImpl(4, 9);
+        assertTrue(!f.equals(g));
+    }
+
 }
