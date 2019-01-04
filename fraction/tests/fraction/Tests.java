@@ -2,6 +2,7 @@ package fraction;
 import org.junit.Test;
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.is;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.fail;
 
@@ -347,10 +348,10 @@ public class Tests {
     public void equalsSomethingTheSame(){
         FractionImpl f = new FractionImpl(3,6);
         FractionImpl g = new FractionImpl(4, 8);
-        assertTrue(f.equals(g));
+        assertEquals(true, f.equals(g));
         FractionImpl h = new FractionImpl(9,3);
         FractionImpl j = new FractionImpl(3);
-        assertTrue(h.equals(j));
+        assertEquals(true, h.equals(j));
     }
 
     @Test

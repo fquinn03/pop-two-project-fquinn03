@@ -172,15 +172,17 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public boolean equals(Object obj) {
-        double fractionAsDecimal = (double)(this.numerator)/(double)(this.denominator);
-        FractionImpl m = (FractionImpl)(obj);
-        double objectAsDecimal = (double)(m.numerator)/(double)(m.denominator);
-        if (fractionAsDecimal == objectAsDecimal){
-            return true;
-        }
-        else
+        if (obj instanceof Fraction) {
+            double fractionAsDecimal = (double) (this.numerator) / (double) (this.denominator);
+            FractionImpl m = (FractionImpl) (obj);
+            double objectAsDecimal = (double) (m.numerator) / (double) (m.denominator);
+            if (fractionAsDecimal == objectAsDecimal)
+                return true;
+        } else
             return false;
+        return false;
     }
+
 
     /**
      * @inheritDoc
