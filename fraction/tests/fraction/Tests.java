@@ -361,4 +361,15 @@ public class Tests {
         assertTrue(!f.equals(g));
     }
 
+    @Test(expected = ClassCastException.class)
+    public void compareFractionsToStrings(){
+        FractionImpl f = new FractionImpl(3,5);
+        f.compareTo("abc");
+    }
+
+    @Test
+    public void compareToInteger(){
+        FractionImpl f = new FractionImpl(3,6);
+        assertThat(f.compareTo(6), is(-1));
+    }
 }

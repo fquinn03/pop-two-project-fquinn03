@@ -3,6 +3,8 @@
  */
 package fraction;
 
+import java.lang.reflect.Type;
+
 import static java.lang.Integer.parseInt;
 
 public class FractionImpl implements Fraction {
@@ -206,20 +208,34 @@ public class FractionImpl implements Fraction {
      * @inheritDoc
      */
     @Override
-    public int compareTo(Fraction o) {
-        double fractionAsDecimal = (double)(this.numerator)/(double)(this.denominator);
-        FractionImpl m = (FractionImpl)(o);
-        double objectAsDecimal = (double)(m.numerator)/(double)(m.denominator);
-        if(fractionAsDecimal > objectAsDecimal){
-            return 1;
-        }
-        else if (fractionAsDecimal < objectAsDecimal){
-            return -1;
-        }
-        else
-            return 0;
-    }
+    public int compareTo(Object f) {
+        if (f instanceof Fraction) {
+            FractionImpl g = (FractionImpl) (f);
+            double fractionAsDecimal = (double) (this.numerator) / (double) (this.denominator);
+            double objectAsDecimal = (double) (g.numerator) / (double) (g.denominator);
+            if (fractionAsDecimal > objectAsDecimal) {
+                return 1;
+            } else if (fractionAsDecimal < objectAsDecimal) {
+                return -1;
+            } else
+                return 0;
 
+        }
+        else if (f instanceof Integer){
+            int g = (int)(f);
+            double fractionAsDecimal = (double) (this.numerator) / (double) (this.denominator);
+            if (fractionAsDecimal > g) {
+                return 1;
+            } else if (fractionAsDecimal < g) {
+                return -1;
+            } else
+                return 0;
+
+        }
+
+        else
+            throw new ClassCastException("You must compare fractions with other fractions or integers. ");
+    }
     /**
      * @inheritDoc
      */

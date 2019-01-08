@@ -1,5 +1,6 @@
 package fraction;
 import java.lang.Comparable;
+import java.lang.reflect.Type;
 /**
  * Created by fquinn03 on 28/11/2018.
  */
@@ -8,7 +9,7 @@ import java.lang.Comparable;
  * Representing fractions of the form numerator and denominator
  * The object should be immutable.
  */
-public interface Fraction extends Comparable<Fraction> {
+public interface Fraction extends Comparable<Object>{
 
     /**
      * Returns a new <pre>Fraction</pre> that is the <em>sum</em> of <pre>this</pre> and the parameter:
@@ -90,7 +91,7 @@ public interface Fraction extends Comparable<Fraction> {
      */
 
     @Override
-    public int compareTo(Fraction f);
+    public int compareTo(Object o);
 
     /**
      * Returns a <pre>String</pre> of the form <pre>n/d</pre>, where <pre>n</pre> is the
