@@ -70,7 +70,7 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="12488" />
+          <entry key="JAVA" value="12766" />
           <entry key="PLAIN_TEXT" value="140" />
         </counts>
       </usages-collector>
@@ -86,8 +86,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fraction/FractionImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
+            <state relative-caret-position="215">
+              <caret line="79" column="82" selection-start-line="79" selection-start-column="82" selection-end-line="79" selection-end-column="82" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -99,7 +99,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fraction/Fraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
+            <state relative-caret-position="-635">
               <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -111,10 +111,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/fraction/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6341">
-              <caret line="377" column="46" selection-start-line="377" selection-start-column="46" selection-end-line="377" selection-end-column="46" />
+            <state relative-caret-position="198">
+              <caret line="384" column="42" selection-start-line="384" selection-start-column="42" selection-end-line="384" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1069#1070#0" expanded="true" />
+                <element signature="e#1123#1124#0" expanded="true" />
+                <element signature="e#2907#2908#0" expanded="true" />
+                <element signature="e#2963#2964#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -179,7 +183,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547064588390" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547066365509" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -245,22 +249,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tests.compareFractiontoString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Fraction" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="fraction.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="fraction" />
-      <option name="MAIN_CLASS_NAME" value="fraction.Tests" />
-      <option name="METHOD_NAME" value="compareFractiontoString" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tests.stringConstructorWithSpaces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Fraction" />
       <extension name="coverage">
@@ -277,20 +265,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests.stringConstructorWithSpacesAndNeedsReducing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fraction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fraction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fraction" />
+      <option name="MAIN_CLASS_NAME" value="fraction.Tests" />
+      <option name="METHOD_NAME" value="stringConstructorWithSpacesAndNeedsReducing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="JUnit.Tests" />
       <item itemvalue="JUnit.Tests.compareFractionToInt" />
-      <item itemvalue="JUnit.Tests.compareFractiontoString" />
       <item itemvalue="JUnit.Tests.compareFractionsToStrings" />
       <item itemvalue="JUnit.Tests.stringConstructorWithSpaces" />
+      <item itemvalue="JUnit.Tests.stringConstructorWithSpacesAndNeedsReducing" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Tests" />
+        <item itemvalue="JUnit.Tests.stringConstructorWithSpacesAndNeedsReducing" />
         <item itemvalue="JUnit.Tests.stringConstructorWithSpaces" />
         <item itemvalue="JUnit.Tests.compareFractionsToStrings" />
         <item itemvalue="JUnit.Tests.compareFractionToInt" />
-        <item itemvalue="JUnit.Tests.compareFractiontoString" />
       </list>
     </recent_temporary>
   </component>
@@ -320,7 +324,7 @@
       <workItem from="1546929739100" duration="1197000" />
       <workItem from="1547043874659" duration="2193000" />
       <workItem from="1547049175842" duration="557000" />
-      <workItem from="1547058185138" duration="3862000" />
+      <workItem from="1547058185138" duration="5449000" />
     </task>
     <task id="LOCAL-00001" summary="developing constructor methods and toString() method">
       <created>1545149475417</created>
@@ -340,27 +344,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2019.01.09 at 19h 04m 51s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests - 2019.01.09 at 19h 58m 43s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests - 2019.01.09 at 19h 58m 57s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests - 2019.01.09 at 20h 00m 37s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests - 2019.01.09 at 20h 06m 00s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 06m 29s.xml">
-      <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 07m 27s.xml">
-      <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 08m 17s.xml">
       <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
     </history-entry>
@@ -370,9 +353,30 @@
     <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 09m 52s.xml">
       <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Tests - 2019.01.09 at 20h 10m 20s.xml">
+      <configuration name="Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests - 2019.01.09 at 20h 15m 15s.xml">
+      <configuration name="Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests - 2019.01.09 at 20h 26m 52s.xml">
+      <configuration name="Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests - 2019.01.09 at 20h 31m 36s.xml">
+      <configuration name="Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests - 2019.01.09 at 20h 31m 50s.xml">
+      <configuration name="Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests - 2019.01.09 at 20h 33m 52s.xml">
+      <configuration name="Tests" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests_stringConstructorWithSpacesAndNeedsReducing - 2019.01.09 at 20h 35m 15s.xml">
+      <configuration name="Tests.stringConstructorWithSpacesAndNeedsReducing" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77209000" />
+    <option name="totallyTimeSpent" value="78796000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -525,7 +529,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fraction/Fraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
+        <state relative-caret-position="-635">
           <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -535,8 +539,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fraction/FractionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
+        <state relative-caret-position="215">
+          <caret line="79" column="82" selection-start-line="79" selection-start-column="82" selection-end-line="79" selection-end-column="82" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -546,10 +550,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/fraction/Tests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6341">
-          <caret line="377" column="46" selection-start-line="377" selection-start-column="46" selection-end-line="377" selection-end-column="46" />
+        <state relative-caret-position="198">
+          <caret line="384" column="42" selection-start-line="384" selection-start-column="42" selection-end-line="384" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#2907#2908#0" expanded="true" />
+            <element signature="e#2963#2964#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -22,7 +22,7 @@ public class FractionImpl implements Fraction {
     private int numerator;
     private int denominator;
 
-    private static int findGCD(int numerator, int denominator) {
+   public static int findGCD(int numerator, int denominator) {
 
         if(denominator == 0){
             return numerator;
@@ -72,12 +72,12 @@ public class FractionImpl implements Fraction {
             try {
                 String numeratorString = fraction.substring(0, fraction.indexOf("/"));
                 numeratorString = numeratorString.trim();
-                numerator = parseInt(numeratorString);
+                int numerator1 = parseInt(numeratorString);
                 String denominatorString = (fraction.substring(fraction.indexOf("/") + 1));
                 denominatorString = denominatorString.trim();
-                denominator = parseInt(denominatorString);
-                this.numerator = (numerator/findGCD(numerator, denominator));
-                this.denominator = (denominator/findGCD(numerator, denominator));
+                int denominator1 = parseInt(denominatorString);
+                this.numerator = (numerator1/findGCD(numerator1, denominator1));
+                this.denominator = (denominator1/findGCD(numerator1, denominator1));
             }
             catch(NumberFormatException e) {
                 throw new NumberFormatException("Mixed fractions should be entered as improper fractions with no spaces. Input '7/4' rather than '1 3/4' ");

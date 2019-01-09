@@ -8,15 +8,15 @@ import static org.junit.Assert.fail;
 
 public class Tests {
 
-/* GCD testing passed as package protected method. Changed to Private now as required by specification.
+/*GCD testing passed as package protected method. Changed to Private now as required by specification.*/
     @Test
         public void TestingGCDFunction(){
-        assertThat(FractionImpl.findGCD(3, 9), is(3));
+        assertThat(FractionImpl.findGCD(6, 9), is(3));
         assertThat(FractionImpl.findGCD(16, 4), is(4));
         assertThat(FractionImpl.findGCD(24, 16), is(8));
         assertThat(FractionImpl.findGCD(-35, 20), is(5));
     }
-    */
+
     @Test
         public void wholeNumberFromAString(){
         Fraction f = new FractionImpl("3");
@@ -377,5 +377,17 @@ public class Tests {
     public void stringConstructorWithSpaces(){
         FractionImpl f = new FractionImpl(" 3 / 4 ");
         assertThat(f.toString(), is("3/4"));
+    }
+
+    @Test
+    public void stringConstructorWithSpacesAndNeedsReducing(){
+        FractionImpl f = new FractionImpl(" 2/4");
+        assertThat(f.toString(),is("1/2"));
+    }
+
+    @Test
+    public void stringConstructorWithDoubleSpacesAndNeedsReducing(){
+        FractionImpl f = new FractionImpl(" 6 / 9");
+        assertThat(f.toString(),is("2/3"));
     }
 }
