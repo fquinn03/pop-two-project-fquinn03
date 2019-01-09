@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a6760db5-4955-473e-938e-35dfe7fc44a7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fraction/fraction/Fraction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Fraction/fraction/FractionImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Fraction/fraction/Tests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fraction/fraction/Fraction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fraction/fraction/Fraction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Fraction/fraction/FractionImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Fraction/fraction/FractionImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Fraction/fraction/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Fraction/fraction/Tests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fraction/Fraction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fraction/Fraction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fraction/FractionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/fraction/FractionImpl.java" afterDir="false" />
@@ -52,22 +52,25 @@
     <session id="-101244569">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.107" value="1" />
-          <entry key="project.open.time.20" value="1" />
+          <entry key="project.open.time.20" value="2" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.47" value="1" />
           <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.61" value="1" />
           <entry key="project.open.time.68" value="1" />
           <entry key="project.open.time.82" value="1" />
-          <entry key="project.opened" value="9" />
+          <entry key="project.open.time.87" value="1" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="11644" />
+          <entry key="JAVA" value="12488" />
           <entry key="PLAIN_TEXT" value="140" />
         </counts>
       </usages-collector>
@@ -80,16 +83,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fraction/FractionImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="233" column="9" lean-forward="true" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
+            <state>
+              <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="imports" expanded="true" />
-                <element signature="e#5253#5254#0" expanded="true" />
-                <element signature="e#5292#5293#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -98,8 +99,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/fraction/Fraction.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+            <state relative-caret-position="17">
+              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -107,11 +108,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/fraction/Tests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6290">
-              <caret line="374" column="1" lean-forward="true" selection-start-line="374" selection-start-column="1" selection-end-line="374" selection-end-column="1" />
+            <state relative-caret-position="6341">
+              <caret line="377" column="46" selection-start-line="377" selection-start-column="46" selection-end-line="377" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,8 +123,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="303">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="179">
+              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -148,8 +149,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/fraction/Fraction.java" />
-        <option value="$PROJECT_DIR$/tests/fraction/Tests.java" />
         <option value="$PROJECT_DIR$/src/fraction/FractionImpl.java" />
+        <option value="$PROJECT_DIR$/tests/fraction/Tests.java" />
       </list>
     </option>
   </component>
@@ -170,32 +171,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="fraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fraction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="fraction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="fraction" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="fraction" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
@@ -203,7 +179,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546895197005" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547064588390" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -223,16 +199,6 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.Tests">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="Fraction" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Fraction" />
       <extension name="coverage">
@@ -295,20 +261,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Tests.stringConstructorWithSpaces" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Fraction" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fraction.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fraction" />
+      <option name="MAIN_CLASS_NAME" value="fraction.Tests" />
+      <option name="METHOD_NAME" value="stringConstructorWithSpaces" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.Tests" />
       <item itemvalue="JUnit.Tests.compareFractionToInt" />
       <item itemvalue="JUnit.Tests.compareFractiontoString" />
       <item itemvalue="JUnit.Tests.compareFractionsToStrings" />
+      <item itemvalue="JUnit.Tests.stringConstructorWithSpaces" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.Tests" />
+        <item itemvalue="JUnit.Tests.stringConstructorWithSpaces" />
         <item itemvalue="JUnit.Tests.compareFractionsToStrings" />
         <item itemvalue="JUnit.Tests.compareFractionToInt" />
         <item itemvalue="JUnit.Tests.compareFractiontoString" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -335,6 +317,10 @@
       <workItem from="1546868186073" duration="1723000" />
       <workItem from="1546874698608" duration="392000" />
       <workItem from="1546881860311" duration="9199000" />
+      <workItem from="1546929739100" duration="1197000" />
+      <workItem from="1547043874659" duration="2193000" />
+      <workItem from="1547049175842" duration="557000" />
+      <workItem from="1547058185138" duration="3862000" />
     </task>
     <task id="LOCAL-00001" summary="developing constructor methods and toString() method">
       <created>1545149475417</created>
@@ -354,39 +340,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Tests - 2018.12.20 at 15h 24m 53s.xml">
+    <history-entry file="Tests - 2019.01.09 at 19h 04m 51s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2019.01.04 at 16h 53m 11s.xml">
+    <history-entry file="Tests - 2019.01.09 at 19h 58m 43s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2019.01.07 at 18h 04m 07s.xml">
+    <history-entry file="Tests - 2019.01.09 at 19h 58m 57s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2019.01.07 at 20h 39m 30s.xml">
+    <history-entry file="Tests - 2019.01.09 at 20h 00m 37s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests_compareFractionsToStrings - 2019.01.07 at 20h 42m 21s.xml">
-      <configuration name="Tests.compareFractionsToStrings" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests_compareFractionsToStrings - 2019.01.07 at 20h 42m 48s.xml">
-      <configuration name="Tests.compareFractionsToStrings" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="Tests - 2019.01.07 at 20h 42m 59s.xml">
+    <history-entry file="Tests - 2019.01.09 at 20h 06m 00s.xml">
       <configuration name="Tests" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2019.01.07 at 20h 44m 09s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
+    <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 06m 29s.xml">
+      <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2019.01.07 at 20h 49m 58s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
+    <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 07m 27s.xml">
+      <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="Tests - 2019.01.07 at 21h 06m 02s.xml">
-      <configuration name="Tests" configurationId="JUnit" />
+    <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 08m 17s.xml">
+      <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 09m 35s.xml">
+      <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Tests_stringConstructorWithSpaces - 2019.01.09 at 20h 09m 52s.xml">
+      <configuration name="Tests.stringConstructorWithSpaces" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69400000" />
+    <option name="totallyTimeSpent" value="77209000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -410,7 +396,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41221374" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41221374" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -500,6 +486,18 @@
     <MESSAGE value="developing toString() and use of GCD method in fraction normalisation" />
     <option name="LAST_COMMIT_MESSAGE" value="developing toString() and use of GCD method in fraction normalisation" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tests/fraction/Tests.java</url>
+          <line>8</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/jdk/internal/reflect/NativeMethodAccessorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -517,8 +515,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="179">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -527,18 +525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fraction/Fraction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/fraction/Tests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6290">
-          <caret line="374" column="1" lean-forward="true" selection-start-line="374" selection-start-column="1" selection-end-line="374" selection-end-column="1" />
+        <state relative-caret-position="17">
+          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -547,13 +535,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/fraction/FractionImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="233" column="9" lean-forward="true" selection-start-line="233" selection-start-column="9" selection-end-line="233" selection-end-column="9" />
+        <state>
+          <caret line="75" column="88" selection-start-line="75" selection-start-column="88" selection-end-line="75" selection-end-column="88" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="imports" expanded="true" />
-            <element signature="e#5253#5254#0" expanded="true" />
-            <element signature="e#5292#5293#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/fraction/Tests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6341">
+          <caret line="377" column="46" selection-start-line="377" selection-start-column="46" selection-end-line="377" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

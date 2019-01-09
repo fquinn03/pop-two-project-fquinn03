@@ -372,4 +372,10 @@ public class Tests {
         FractionImpl f = new FractionImpl(3,6);
         assertThat(f.compareTo(6), is(-1));
     }
+
+    @Test
+    public void stringConstructorWithSpaces(){
+        FractionImpl f = new FractionImpl(" 3 / 4 ");
+        assertThat(f.toString(), is("3/4"));
+    }
 }

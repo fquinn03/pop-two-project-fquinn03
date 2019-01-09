@@ -77,7 +77,7 @@ public interface Fraction extends Comparable<Object>{
      * @return whether the true fractions are equal
      */
     @Override
-    public boolean equals(Object o);
+    public boolean equals(Object f);
     /**
      * Returns:
      * <ul>
@@ -91,7 +91,7 @@ public interface Fraction extends Comparable<Object>{
      */
 
     @Override
-    public int compareTo(Object o);
+    public int compareTo(Object f);
 
     /**
      * Returns a <pre>String</pre> of the form <pre>n/d</pre>, where <pre>n</pre> is the

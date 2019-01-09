@@ -3,7 +3,7 @@
  */
 package fraction;
 
-import java.lang.reflect.Type;
+import java.lang.Package;
 
 import static java.lang.Integer.parseInt;
 
@@ -70,8 +70,12 @@ public class FractionImpl implements Fraction {
         }
         else
             try {
-                numerator = parseInt(fraction.substring(0, fraction.indexOf("/")));
-                denominator = parseInt(fraction.substring(fraction.indexOf("/") + 1));
+                String numeratorString = fraction.substring(0, fraction.indexOf("/"));
+                numeratorString = numeratorString.trim();
+                numerator = parseInt(numeratorString);
+                String denominatorString = (fraction.substring(fraction.indexOf("/") + 1));
+                denominatorString = denominatorString.trim();
+                denominator = parseInt(denominatorString);
                 this.numerator = (numerator/findGCD(numerator, denominator));
                 this.denominator = (denominator/findGCD(numerator, denominator));
             }
@@ -219,7 +223,6 @@ public class FractionImpl implements Fraction {
                 return -1;
             } else
                 return 0;
-
         }
         else if (f instanceof Integer){
             int g = (int)(f);
@@ -232,7 +235,6 @@ public class FractionImpl implements Fraction {
                 return 0;
 
         }
-
         else
             throw new ClassCastException("You must compare fractions with other fractions or integers. ");
     }
