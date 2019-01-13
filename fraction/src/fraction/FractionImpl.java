@@ -2,9 +2,6 @@
  * Created by fquinn03 on 28/11/2018.
  */
 package fraction;
-
-import java.lang.Package;
-
 import static java.lang.Integer.parseInt;
 
 public class FractionImpl implements Fraction {
@@ -22,8 +19,7 @@ public class FractionImpl implements Fraction {
     private int numerator;
     private int denominator;
 
-   public static int findGCD(int numerator, int denominator) {
-
+   private static int findGCD(int numerator, int denominator) {
         if(denominator == 0){
             return numerator;
         }
@@ -99,9 +95,9 @@ public class FractionImpl implements Fraction {
     @Override
     public Fraction add(Fraction f) {
         FractionImpl g = (FractionImpl)(f);
-        int NewNumerator = ((this.numerator*g.denominator)+(this.denominator*g.numerator));
-        int NewDenominator = (this.denominator*g.denominator);
-        return new FractionImpl(NewNumerator, NewDenominator);
+        int newNumerator = ((this.numerator*g.denominator)+(this.denominator*g.numerator));
+        int newDenominator = (this.denominator*g.denominator);
+        return new FractionImpl(newNumerator, newDenominator);
     }
 
     /**
@@ -113,6 +109,7 @@ public class FractionImpl implements Fraction {
         int NewNumerator = ((this.numerator*g.denominator)-(this.denominator*g.numerator));
         int NewDenominator = (this.denominator*g.denominator);
         return new FractionImpl(NewNumerator, NewDenominator);
+
     }
 
     /**
@@ -151,7 +148,6 @@ public class FractionImpl implements Fraction {
         if(this.denominator < 0){
             this.denominator *= -1;
         }
-
         return new FractionImpl(this.numerator, this.denominator);
     }
 
@@ -205,39 +201,25 @@ public class FractionImpl implements Fraction {
     public Fraction inverse() {
        int newNumerator = this.denominator;
        int  newDenominator = this.numerator;
-        return new FractionImpl(newNumerator, newDenominator);
+       return new FractionImpl(newNumerator, newDenominator);
     }
 
     /**
      * @inheritDoc
      */
     @Override
-    public int compareTo(Object f) {
-        if (f instanceof Fraction) {
-            FractionImpl g = (FractionImpl) (f);
-            double fractionAsDecimal = (double) (this.numerator) / (double) (this.denominator);
-            double objectAsDecimal = (double) (g.numerator) / (double) (g.denominator);
-            if (fractionAsDecimal > objectAsDecimal) {
-                return 1;
-            } else if (fractionAsDecimal < objectAsDecimal) {
-                return -1;
-            } else
-                return 0;
+    public int compareTo(Fraction f) {
+        FractionImpl g = (FractionImpl) (f);
+        double fractionAsDecimal = (double) (this.numerator) / (double) (this.denominator);
+        double objectAsDecimal = (double) (g.numerator) / (double) (g.denominator);
+        if (fractionAsDecimal > objectAsDecimal) {
+            return 1;
         }
-        else if (f instanceof Integer){
-            int g = (int)(f);
-            double fractionAsDecimal = (double) (this.numerator) / (double) (this.denominator);
-            if (fractionAsDecimal > g) {
-                return 1;
-            } else if (fractionAsDecimal < g) {
-                return -1;
-            } else
-                return 0;
-
-        }
-        else
-            throw new ClassCastException("You must compare fractions with other fractions or integers. ");
-    }
+        else if (fractionAsDecimal < objectAsDecimal) {
+            return -1;
+        } else
+            return 0;
+   }
     /**
      * @inheritDoc
      */

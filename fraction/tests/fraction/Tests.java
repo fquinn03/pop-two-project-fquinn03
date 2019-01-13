@@ -8,7 +8,7 @@ import static org.junit.Assert.fail;
 
 public class Tests {
 
-/*GCD testing passed as package protected method. Changed to Private now as required by specification.*/
+/*GCD testing passed as package protected method. Changed to Private now as required by specification.
     @Test
         public void TestingGCDFunction(){
         assertThat(FractionImpl.findGCD(6, 9), is(3));
@@ -16,6 +16,7 @@ public class Tests {
         assertThat(FractionImpl.findGCD(24, 16), is(8));
         assertThat(FractionImpl.findGCD(-35, 20), is(5));
     }
+    */
 
     @Test
         public void wholeNumberFromAString(){
@@ -361,18 +362,6 @@ public class Tests {
         assertTrue(!f.equals(g));
     }
 
-    @Test(expected = ClassCastException.class)
-    public void compareFractionsToStrings(){
-        FractionImpl f = new FractionImpl(3,5);
-        f.compareTo("abc");
-    }
-
-    @Test
-    public void compareToInteger(){
-        FractionImpl f = new FractionImpl(3,6);
-        assertThat(f.compareTo(6), is(-1));
-    }
-
     @Test
     public void stringConstructorWithSpaces(){
         FractionImpl f = new FractionImpl(" 3 / 4 ");
@@ -387,7 +376,13 @@ public class Tests {
 
     @Test
     public void stringConstructorWithDoubleSpacesAndNeedsReducing(){
-        FractionImpl f = new FractionImpl(" 6 / 9");
+        FractionImpl f = new FractionImpl("    6 /            9 ");
         assertThat(f.toString(),is("2/3"));
+    }
+
+    @Test (expected = NumberFormatException.class)
+    public void stringConstructorWithImproperFraction(){
+        FractionImpl f = new FractionImpl(" 1 6 / 9 ");
+
     }
 }
