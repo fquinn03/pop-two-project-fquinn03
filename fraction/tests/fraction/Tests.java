@@ -2,9 +2,7 @@ package fraction;
 import org.junit.Test;
 import static junit.framework.TestCase.assertTrue;
 import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThat;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 
 public class Tests {
 
@@ -383,6 +381,30 @@ public class Tests {
     @Test (expected = NumberFormatException.class)
     public void stringConstructorWithImproperFraction(){
         FractionImpl f = new FractionImpl(" 1 6 / 9 ");
+    }
 
+    @Test
+    public void stringConstructorWithSpacesAroundWholeNumber(){
+        FractionImpl f = new FractionImpl("       8    ");
+        assertThat(f.toString(), is("8"));
+    }
+
+    @Test
+    public void fractionIsEqualToWholeNumberAsFraction(){
+        FractionImpl f = new FractionImpl(  4);
+        FractionImpl g = new FractionImpl(16,4);
+        assertTrue(f.equals(g));
+    }
+
+    @Test
+    public void fractionIsEqualToWholeNumberNotFraction(){
+        FractionImpl g = new FractionImpl(16,4);
+        assertFalse(g.equals(4));
+    }
+
+    @Test
+    public void fractionNotEqualToWholeNumberNotFraction(){
+        FractionImpl g = new FractionImpl(16,4);
+        assertFalse(g.equals(3));
     }
 }

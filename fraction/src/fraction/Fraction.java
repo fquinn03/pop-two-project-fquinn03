@@ -68,7 +68,6 @@ public interface Fraction extends Comparable<Fraction>{
      * @return the newly inverted fraction
      */
     public Fraction inverse();
-
     /**
      * Returns <pre>true</pre> if <pre>o</pre> is a <pre>Fraction</pre> equal to <pre>this</pre>,
      * and <pre>false</pre> in all other cases.
