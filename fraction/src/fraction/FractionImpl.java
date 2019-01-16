@@ -69,7 +69,6 @@ public class FractionImpl implements Fraction {
      * The constructor throws a NumberFormatException if blanks are found within the integers.
      * The constructor throws an ArithmeticException if given a string representing a fraction whose denominator is zero.
      * @param fraction the string representation of the fraction
-
      */
 
     public FractionImpl(String fraction) {
@@ -118,7 +117,7 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public Fraction add(Fraction f) {
-        FractionImpl g = (FractionImpl)(f);
+        FractionImpl g = ((FractionImpl) f);
         int newNumerator = ((this.numerator*g.denominator)+(this.denominator*g.numerator));
         int newDenominator = (this.denominator*g.denominator);
         return new FractionImpl(newNumerator, newDenominator);
@@ -130,7 +129,7 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public Fraction subtract(Fraction f) {
-        FractionImpl g = (FractionImpl)(f);
+        FractionImpl g = ((FractionImpl) f);
         int NewNumerator = ((this.numerator*g.denominator)-(this.denominator*g.numerator));
         int NewDenominator = (this.denominator*g.denominator);
         return new FractionImpl(NewNumerator, NewDenominator);
@@ -144,7 +143,7 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public Fraction multiply(Fraction f) {
-        FractionImpl g = (FractionImpl)(f);
+        FractionImpl g = ((FractionImpl) f);
         int NewNumerator = this.numerator*g.numerator;
         int NewDenominator = this.denominator*g.denominator;
         return new FractionImpl(NewNumerator, NewDenominator);
@@ -157,7 +156,7 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public Fraction divide(Fraction f) {
-        FractionImpl g = (FractionImpl)(f);
+        FractionImpl g = ((FractionImpl) f);
         int NewNumerator = this.numerator*g.denominator;
         int NewDenominator = this.denominator*g.numerator;
         if (NewDenominator == 0){
@@ -213,14 +212,13 @@ public class FractionImpl implements Fraction {
     public boolean equals(Object o) {
         /*checks if o is a fraction*/
         if (o instanceof Fraction){
-            FractionImpl m = (FractionImpl) (o);
+            FractionImpl m = ((FractionImpl) o);
             if(this.numerator == m.numerator && this.denominator == m.denominator){
                 return true;
             }
             else
                 return false;
         }
-        else
             return false;
     }
 
@@ -256,7 +254,7 @@ public class FractionImpl implements Fraction {
      */
     @Override
     public int compareTo(Fraction f) {
-        FractionImpl g = (FractionImpl) (f);
+        FractionImpl g = ((FractionImpl) f);
         /* checks with fraction is larger by divding denominator into numerator */
         double fractionAsDecimal = (double) (this.numerator) / (double) (this.denominator);
         double objectAsDecimal = (double) (g.numerator) / (double) (g.denominator);
@@ -270,13 +268,14 @@ public class FractionImpl implements Fraction {
    }
     /**
      * Gives the string representation of this fraction,
-     * As a whole number if the denominator is equal to zero
+     * As a whole number if the denominator is equal to one
      * or as 0/1 if the numerator is zero
      * @return the string value of this fraction
      */
     @Override
     public String toString() {
-        /* checks the fraction is not a whole number or zero */
+        /* checks the fraction is not a whole number if so the denominator can not be 1
+           or zero the numerator must be zero and the denominator can be 1 */
         if(this.denominator != 1 || this.numerator == 0) {
             return String.valueOf(this.numerator) + "/" + String.valueOf(this.denominator);
         }
