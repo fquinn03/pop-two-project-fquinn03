@@ -82,7 +82,7 @@ public class FractionImpl implements Fraction {
         else
             try {
                 /* If the fraction is a string. Break it into two strings. One before and after the "/"
-                Then trim these strings and parsed for integers */
+                Then trim these strings and parse for integers */
                 String numeratorString = fraction.substring(0, fraction.indexOf("/"));
                 numeratorString = numeratorString.trim();
                 int numerator1 = parseInt(numeratorString);
